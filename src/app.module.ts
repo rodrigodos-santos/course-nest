@@ -15,7 +15,8 @@ import { CoursesModule } from './courses/courses.module';
       username: 'postgres',
       password: 'docker',
       database: 'cursonestjs',
-      autoLoadEntities: true, //com base na entidade é criada uma tabela no BD
+      entities: [__dirname + '/**/*.entity.js'],
+      autoLoadEntities: false, //com base na entidade é criada uma tabela no BD
       synchronize: false,
     }),
   ],
